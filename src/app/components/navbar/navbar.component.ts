@@ -1,25 +1,4 @@
-// import { Component, OnInit } from '@angular/core';
-// import { LocalStorageService } from 'src/app/Services/local-storage.service';
-// import { TranslationService } from 'src/app/Services/translate.service';
 
-
-// @Component({
-//   selector: 'app-navbar',
-//   templateUrl: './navbar.component.html',
-//   styleUrls: ['./navbar.component.css']
-// })
-// export class NavbarComponent implements OnInit {
-// constructor(private translationService: TranslationService, private localStorageService: LocalStorageService){}
-//   ngOnInit(): void {
-//   }
-
-// transalte(lang:string){
-
-//   this.translationService.switchLang(lang)
-//   this.localStorageService.setItem('lang', lang)
-// }
-
-// }
 import { Component, OnInit } from '@angular/core';
 import { LocalStorageService } from 'src/app/Services/local-storage.service';
 import { TranslationService } from 'src/app/Services/translate.service';
@@ -58,3 +37,17 @@ export class NavbarComponent implements OnInit {
   }
 
 }
+
+
+// export class NavbarComponent implements OnInit {
+// constructor(private translationService: TranslationService, private localStorageService: LocalStorageService){}
+//   ngOnInit(): void {
+//   }
+
+// transalte(lang:string){
+
+//   this.translationService.switchLang(lang)
+//   this.localStorageService.setItem('lang', lang)
+// }
+
+// }
