@@ -1,0 +1,26 @@
+.navbar-brand img{
+    width: 270px;
+    height: 60px;
+  }
+  .navbar-nav .nav-link {
+      color: #fff;
+  }
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active
+{
+    color: #ED5224;
+    }
+
+    .navbar-nav .dropdown-item {
+    color: #000; 
+    }
+
+    .navbar-nav .dropdown-item:hover {
+        color: #ED5224; 
+    }
+    .dropdown-toggle img{
+        width: 35px;
+        height: 20px;
+   
+        
+    }

@@ -1,0 +1,31 @@
+.unique-photo img{
+    width: 100%;
+ }
+ 
+ @keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.slideInRight {
+    animation: slideInRight 3s ease-out;
+}
+
+.fadeIn {
+    animation: fadeIn 3s ease-out;
+}

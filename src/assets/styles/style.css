@@ -1,0 +1,287 @@
+
+body{  
+
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(7,59,99,1) 0%, rgba(165,184,199,1) 39%, rgba(255,255,255,1) 100%);
+    background-attachment: fixed;
+    overflow-x: hidden;
+
+}
+/* ----------------  fonts  --------------------- */
+@font-face {
+    font-family: "Righteous";
+    src: url(../fonts/Righteous-Regular.ttf);
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+.title-font {
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .body-font {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+.body-color{
+    color: #E0E0E0;
+}
+  /*  ------------------  header  --------------------- */
+ .navbar-brand img{
+    width: 270px;
+    height: 60px;
+  }
+  .navbar-nav .nav-link {
+      color: #fff;
+  }
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active
+{
+    color: #ED5224;
+    }
+
+    .navbar-nav .dropdown-item {
+    color: #000; 
+    }
+
+    .navbar-nav .dropdown-item:hover {
+        color: #ED5224; 
+    }
+    .dropdown-toggle img{
+        width: 35px;
+        height: 20px;
+   
+        
+    }
+ /* ----------------------Slider Styles ---------------------*/
+ .carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 400px; /* Adjust the height as needed */
+}
+
+.carousel-text {
+    flex: 1;
+    padding: 20px;
+    font-family: Righteous;
+}
+
+.carousel-image {
+    flex: 1;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the area */
+}
+
+.custom-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1px; 
+    width: 100%;
+    height: 1px; 
+    background-color: currentColor; 
+}
+.myButton {
+	box-shadow: 0px 10px 14px -7px #ED5224;
+	background-color:#ED5224;
+	border-radius:5px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:normal;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #dfc9c2;
+	&:hover {
+	background-color:#ED5224;
+}
+ &:active {
+	position:relative;
+	top:1px;
+}}
+
+
+/* -------------------------------------------------------------- */
+                       /* Trusted clients */
+.trusted-by {
+    background-color: #F5F5F5;
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+.slick-slide{
+    margin: 0 20px;
+}
+.slick-slide img{
+    width: 100%;
+}
+.slick-slider{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+}
+.slick-list{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block
+}
+.slick-slide{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+.slick-slide img{
+    display: block;
+}
+.slick-initialized .slick-slide{
+    display: block;
+}
+
+ /* --------------what makes us unique ------------------*/
+ .unique-photo img{
+    width: 100%;
+ }
+ @keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.slideInRight {
+    animation: slideInRight 3s ease-out;
+}
+
+.fadeIn {
+    animation: fadeIn 3s ease-out;
+}
+
+
+ /* ----------------Solutions------------------------ */
+
+ .circle-container {
+    background-color: #ED5224;
+    width: 80px;  
+    height: 80px; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto; 
+    box-shadow: -20px 5px 20px -1px rgba(234,227,210,1); 
+
+}
+
+.circle-container img {
+    max-width: 50%; 
+    max-height: 50%; 
+}
+/* ------------------Refrences----------------- */
+.ref-container {
+    background-color: #1F4E72; 
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ref-container img {
+    max-width: 60%; 
+    max-height: 60%;
+}
+
+.card {
+    border-radius: 20px; 
+  
+}
+.rectangular-card {
+    
+    transition: background 0.3s ease; /* Smooth transition for background change */
+    overflow: hidden; /* To ensure background image stays within card bounds */
+}
+
+.rectangular-card:hover {
+    background: url('../images/home/img3.png') no-repeat center center/cover;
+    text-decoration: white; /* Optionally change text color on hover */
+}
+
+.shadow-sm {
+    box-shadow: 0px 4px 10px rgba(234, 227, 210, 0.2); /* Shadow for the card */
+}
+
+.card-text {
+    font-weight: 500;
+    color: #333; /* Text color */
+}
+/* -------------------------------------- */
+
+/*-------------- our customer-------------- */
+#our-customer{
+   
+    border-radius: 5%;
+    background-color: #517591;
+
+}
+/* ------------- */
+/* footer style */
+#footer{
+    background-color: #073B63;
+    ;
+}
+
+.footer-element{
+	text-decoration: none;
+	color: white;
+    font-family: "Poppins";
+
+
+}
+.footer-header{
+	color: white;
+    font-family: "Righteous";
+
+}
+.powerd-by img{
+	width: 100%;
+}

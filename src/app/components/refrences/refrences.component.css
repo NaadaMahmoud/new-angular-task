@@ -1,0 +1,40 @@
+
+.ref-container {
+  background-color: #1F4E72;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.ref-container img {
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.card {
+  border-radius: 20px;
+
+}
+.rectangular-card {
+
+  transition: background 0.3s ease; /* Smooth transition for background change */
+  overflow: hidden; /* To ensure background image stays within card bounds */
+}
+
+.rectangular-card:hover {
+  background: url('../../../assets/images/home/img3.png') no-repeat center center/cover;
+  text-decoration: white; /* Optionally change text color on hover */
+}
+
+.shadow-sm {
+  box-shadow: 0px 4px 10px rgba(234, 227, 210, 0.2); /* Shadow for the card */
+}
+
+.card-text {
+  font-weight: 500;
+  color: #333; /* Text color */
+}

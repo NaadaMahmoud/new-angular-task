@@ -1,0 +1,69 @@
+<div class="container">
+    <div id="carouselExampleControls" class="carousel slide carousel-fade mt-5">
+        <div class="carousel-inner">
+            <!-- slider1 -->
+            <div class="carousel-item active">
+                <div class="container d-flex flex-column flex-lg-row align-items-center">
+                    <div class="carousel-text text-center text-lg-start">
+                        <h1 class="text-white ms-lg-6">{{"sliderHeader1" | translate}}</h1>
+                        <h1 class="text-white ms-lg-6">{{"sliderHeader2" | translate}}</h1>
+                        <span class="ms-lg-6 d-block mb-3">
+                            <p class="fs-5 body-font lh-lg custom-underline text-white d-inline">{{"sliderHeader3" |translate}}</p>
+                            <a >
+                                <i [ngClass]="currentIconClass" style="color: white;"></i>
+                            </a>
+                        </span>
+                        <span class="d-block mb-3">
+                            <p class="body-font fw-light ms-lg-6 body-color">{{"sliderP1" |translate}}</p>
+                            <p class="body-font fw-light ms-lg-6 body-color">{{"sliderP2" | translate}}</p>
+                        </span>
+                        <span>
+                            <a  class="myButton ms-lg-6">{{"sliderBtn"| translate}}
+                                <i [ngClass]="currentIconClass"></i>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="carousel-image mt-4 mt-lg-0">
+                        <img src="../../../assets/images/home/slider1.png" alt="Slide Image 1" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <!-- slider2 -->
+                       <div class="carousel-item active">
+                <div class="container d-flex flex-column flex-lg-row align-items-center">
+                    <div class="carousel-text text-center text-lg-start">
+                        <h1 class="text-white ms-lg-6">{{"sliderHeader1" | translate}}</h1>
+                        <h1 class="text-white ms-lg-6">{{"sliderHeader2" | translate}}</h1>
+                        <span class="ms-lg-6 d-block mb-3">
+                            <p class="fs-5 body-font lh-lg custom-underline text-white d-inline">{{"sliderHeader3" |translate}}</p>
+                            <a >
+                                <i [ngClass]="currentIconClass" style="color: white;"></i>
+                            </a>
+                        </span>
+                        <span class="d-block mb-3">
+                            <p class="body-font fw-light ms-lg-6 body-color">{{"sliderP1" |translate}}</p>
+                            <p class="body-font fw-light ms-lg-6 body-color">{{"sliderP2" | translate}}</p>
+                        </span>
+                        <span>
+                            <a  class="myButton ms-lg-6">{{"sliderBtn"| translate}}
+                                <i [ngClass]="currentIconClass"></i>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="carousel-image mt-4 mt-lg-0">
+                        <img src="../../../assets/images/home/slider2.png" alt="Slide Image 1" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>

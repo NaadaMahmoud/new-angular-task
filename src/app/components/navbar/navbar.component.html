@@ -1,0 +1,56 @@
+<!-- -----------------------Navbar---------------------------------------- -->
+<nav class="navbar navbar-expand-lg navbar-dark  title-font ">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand " routerLink="/">
+            <img src="../../../assets/images/logo/Group 2.png" alt="Logo" class="d-inline-block align-top ">
+
+        </a>
+
+        <!-- Toggler/collapsible Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home">{{"Home" |translate}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/unique">{{"aboutUs" |translate}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/solutions">{{"solutions" |translate}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="">{{"Parteners" |translate}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/references">{{"References" | translate}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="">{{"Customers" |translate}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contactus">{{"ContactUs"| translate}}</a>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                     <img [src]="currentLanguageImage" alt="Language Flag">
+                     {{"Language" | translate}}
+                 </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item " (click)="transalte('en')">
+                                {{"English"|translate}}</a></li>
+                        <li><a class="dropdown-item" (click)="transalte('ar')">{{"Arabic"|translate}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
