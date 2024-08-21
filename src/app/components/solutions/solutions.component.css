@@ -11,6 +11,9 @@
   box-shadow: -20px 5px 20px -1px rgba(234,227,210,1);
 
 }
+.highlight-color {
+  color: #ED5224;
+}
 
 .circle-container img {
   max-width: 50%;

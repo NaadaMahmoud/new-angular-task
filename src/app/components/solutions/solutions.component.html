@@ -1,19 +1,24 @@
 <div class="container mt-5" id="solutions">
     <div class="text-center title-font mb-5">
-        <h2 class="text-white">OUR <span class="highlight-color">Solutions</span></h2>
+        <h2 class="text-white">{{"OUR"|translate}} <span class="highlight-color">{{"Solutions"|translate}}</span></h2>
     </div>
   
     <!-- Dynamic Rows -->
-    <div *ngFor="let row of solutions; let rowIndex = index" class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4 mt-5">
+    <div *ngFor="let row of solutions; let rowIndex = index"
+         class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4 mt-5"
+         [attr.data-aos]="'fade-up'"
+         [attr.data-aos-duration]="1000"
+         [attr.data-aos-delay]="rowIndex === 0 ? '0' : '1000'">
+         
         <div *ngFor="let solution of row; let i = index"
              class="col text-center"
              [attr.data-aos]="'fade-up'"
-             [attr.data-aos-duration]="rowIndex === 0 ? '300' : '500'"
+             [attr.data-aos-duration]="1000"
              [attr.data-aos-delay]="i * 100">
             <div class="circle-container">
                 <img [src]="solution.imageSrc" class="img-fluid" [alt]="solution.altText">
             </div>
-            <p class="text-white body-font mt-3">{{ solution.label }}</p>
+            <p class="text-white body-font mt-3">{{ solution.label |translate}}</p>
         </div>
     </div>
   </div>
