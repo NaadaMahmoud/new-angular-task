@@ -4,7 +4,7 @@
     "English" :"English",
     "Arabic":"Arabic",
     "Home": "Home",
-    "aboutUs": "about us",
+    "aboutUs": "About us",
     "Solutions": " Solutions",
     "Parteners": "Parteners",
     "References": "References",
@@ -62,7 +62,13 @@
     "form-name":" your name",
     "form-email":" your email",
     "form-message":" message",
-    "Send message":"Send message"
+    "Send message":"Send message",
+
+    "footer-about":
+    "About Business Engines was founded in 2021 to operate in Egypt to build value added solutions o the region market, our main business sector is fintech, integrating technology into the products of financial services firm to improve their use and delivery to consumers.",
+    "Quick Links":"Quick Links",
+    "Address":"Address",
+    "addressP":"Business Engines Technology OFFICE 508, 5TH FLOOR, NEMAA BUILDING, 155 EMTEDAD RAMSES ST. 6TH DISTRICT, NASER CITY, Cairo, Egypt"
 
 
 
