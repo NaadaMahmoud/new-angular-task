@@ -2,11 +2,11 @@
 * {
     overflow: hidden;
   }
-  
+
   .ms-xl-6 {
     margin-left: 7rem !important;
   }
-  
+
   /* Centering content on mobile screens */
   @media (max-width: 767px) {
     .carousel-item {
@@ -15,62 +15,62 @@
       justify-content: center; /* Center content horizontally */
       text-align: center; /* Center text */
     }
-  
+
     .carousel-text {
       padding: 10px;
       text-align: center; /* Center text within carousel-text */
     }
-  
+
     .carousel-image {
       margin-top: 20px;
       display: flex;
       justify-content: center; /* Center the image */
     }
-  
+
     .carousel-image img {
       width: 100%;
       height: auto;
       max-width: 300px; /* Limit the width of the image on small screens */
       object-fit: cover;
     }
-  
+
     .ms-xl-6 {
       margin-left: 0 !important; /* Remove the left margin on mobile */
     }
-  
+
     .myButton {
       margin: 10px auto; /* Center the button */
     }
   }
-  
+
   .carousel-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-height: 400px; /* Adjust the height as needed */
   }
-  
+
   .carousel-text {
     flex: 1;
     padding: 20px;
     font-family: Righteous;
   }
-  
+
   .carousel-image {
     flex: 1;
   }
-  
+
   .carousel-image img {
     width: 80%;
     height: auto;
     object-fit: cover; /* Ensures the image covers the area */
   }
-  
+
   .custom-underline {
     position: relative;
     display: inline-block;
   }
-  
+
   .custom-underline::after {
     content: '';
     position: absolute;
@@ -80,7 +80,7 @@
     height: 1px;
     background-color: currentColor;
   }
-  
+
   .myButton {
     box-shadow: 0px 10px 14px -7px #ED5224;
     background-color: #ED5224;
@@ -95,13 +95,17 @@
     text-decoration: none;
     text-shadow: 0px 1px 0px #dfc9c2;
   }
-  
+  .myButton i {
+    vertical-align: middle; /* Adjusts vertical alignment */
+    line-height: 1; /* Ensures the icon and text align well */
+  }
+
+
   .myButton:hover {
     background-color: #d94f21; /* Change the color if needed for hover effect */
   }
-  
+
   .myButton:active {
     position: relative;
     top: 1px;
   }
-  
