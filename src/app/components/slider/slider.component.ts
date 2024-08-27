@@ -1,36 +1,29 @@
-// import { Component, OnInit } from '@angular/core';
-// import { TranslationService } from 'src/app/Services/translate.service';
-
-// @Component({
-//   selector: 'app-slider',
-//   templateUrl: './slider.component.html',
-//   styleUrls: ['./slider.component.css']
-// })
-// export class SliderComponent  {
- 
-// }
-
-
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { TranslationService } from 'src/app/Services/translate.service';
-import { LocalStorageService } from 'src/app/Services/local-storage.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.css']
 })
-export class SliderComponent implements OnInit {
+export class SliderComponent implements OnInit, OnDestroy {
   currentIconClass: string = 'fa-solid fa-arrow-right'; // Default icon class
+  private langChangeSubscription: Subscription | undefined;
 
   constructor(
-    private translationService: TranslationService,
-    private localStorageService: LocalStorageService
+    private translationService: TranslationService
   ) {}
 
   ngOnInit(): void {
-    const lang = this.localStorageService.getItem('lang') || 'en';
+    // Initialize based on the current language
+    const lang = this.translationService.getCurrentLang();
     this.setIconClass(lang);
+
+    // Subscribe to language changes
+    this.langChangeSubscription = this.translationService.languageChanged.subscribe((newLang: string) => {
+      this.setIconClass(newLang);
+    });
   }
 
   private setIconClass(lang: string) {
@@ -39,5 +32,12 @@ export class SliderComponent implements OnInit {
       'ar': 'fa-solid fa-arrow-left'   // Example icon for Arabic
     };
     this.currentIconClass = iconClasses[lang];
+  }
+
+  ngOnDestroy(): void {
+    // Unsubscribe to prevent memory leaks
+    if (this.langChangeSubscription) {
+      this.langChangeSubscription.unsubscribe();
+    }
   }
 }
