@@ -15,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -36,7 +37,7 @@ export function createTranslateLoader(http: HttpClient) {
   imports: [
     BrowserModule,
     FormsModule,
-    
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({

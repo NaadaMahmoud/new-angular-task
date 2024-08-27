@@ -8,6 +8,10 @@ html[dir="ltr"] {
   direction: ltr;
   text-align: left;
 }
+
+html[dir="rtl"] swiper {
+  direction: rtl;
+}
 body{
 
   height: 100vh;

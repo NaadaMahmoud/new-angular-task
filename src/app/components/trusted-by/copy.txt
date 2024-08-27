@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 declare var $: any; // Declare jQuery
 
 @Component({
@@ -6,27 +6,13 @@ declare var $: any; // Declare jQuery
   templateUrl: './trusted-by.component.html',
   styleUrls: ['./trusted-by.component.css']
 })
-export class TrustedByComponent implements AfterViewInit, OnDestroy {
+export class TrustedByComponent implements AfterViewInit{
 
-  private mutationObserver: MutationObserver | undefined;
 
   constructor() { }
 
   ngAfterViewInit(): void {
     this.initializeSlick();
-
-    // Watch for changes in the 'dir' attribute
-    this.mutationObserver = new MutationObserver((mutations) => {
-      mutations.forEach(() => {
-        this.reinitializeSlick();
-      });
-    });
-
-    const targetNode = document.documentElement; // Observe the <html> element
-    this.mutationObserver.observe(targetNode, {
-      attributes: true, // Watch for attribute changes
-      attributeFilter: ['dir'] // Only listen for changes in 'dir' attribute
-    });
   }
 
   initializeSlick(): void {
@@ -68,16 +54,5 @@ export class TrustedByComponent implements AfterViewInit, OnDestroy {
         }
       ]
     });
-  }
-
-  reinitializeSlick(): void {
-    $('.customer-logos').slick('unslick'); // Destroy the current instance
-    this.initializeSlick(); // Reinitialize with the new direction
-  }
-
-  ngOnDestroy(): void {
-    if (this.mutationObserver) {
-      this.mutationObserver.disconnect(); // Stop observing when the component is destroyed
-    }
   }
 }
